@@ -281,7 +281,6 @@ reposioryArray.forEach(repObj => {
     // Append the created <li> element to <ol>
     ol.appendChild(li);
   });
-
 </script>
 </form></div>
 
@@ -358,5 +357,21 @@ reposioryArray.forEach(repObj => {
 
 
   
+<script>
 
+    let brokenPhotoContainer = document.querySelector("#js-pjax-container div div.h-card");
+    brokenPhotoContainer.querySelector('a.u-photo').remove();
+
+    // <a itemprop="image" class="u-photo d-block position-relative" alt="@Frazer" src="https://avatars0.githubusercontent.com/u/374464?s=88&amp;v=4""><img alt="" width="230" height="230" class="avatar width-full rounded-2" alt="@Frazer" src="https://avatars0.githubusercontent.com/u/374464?s=88&amp;v=4"></a>
+
+        let newPhoto = document.createElement("A");
+        newPhoto.classList = "u-photo d-block position-relative";
+        newPhoto.href = "https://avatars2.githubusercontent.com/u/374464?s=460&v=4";
+        newPhoto.target="FrazerPhoto";
+        newPhoto.itemprop="image";
+        newPhoto.alt="@Frazer";
+        newPhoto.innerHTML = '<img width="230" height="230" class="avatar width-full rounded-2" alt="@Frazer" src="https://avatars2.githubusercontent.com/u/374464?s=460&v=4">';
+        //brokenPhotoContainer.appendChild(newPhoto);
+        brokenPhotoContainer.insertBefore(newPhoto, brokenPhotoContainer.firstChild);
+ </script>
 </body></html>
