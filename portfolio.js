@@ -67,7 +67,7 @@ let displayPortfolio = (repositoryArray) => {
       let starFetch = fetch('https://api.github.com/repos/Frazer/'+repObj.name).then(response =>{
         response.json().then(data => { 
 
-          descP.innerHTML = data.description;
+          if (data.description) {descP.innerHTML = data.description;}
           if(data.stargazers_count){
             let starLink = document.createElement("A");
             starLink.classList = "pinned-repo-meta muted-link";
