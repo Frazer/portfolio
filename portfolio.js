@@ -100,7 +100,7 @@ let displayPortfolio = (repositoryArray) => {
     href:"Frazer/PhyllotaxisFlowerOnCanvasWithD3",
     title:"PhyllotaxisFlowerOnCanvasWithD3",
     name:"PhyllotaxisFlowerOnCanvasWithD3",
-    desc:"PhyllotaxisFlowerOnCanvasWithD3",
+    desc:"An interactive exploration of color and patterns",
     backgroundColor:"#f1e05a;",
     lang:"D3.js",
     demo:"https://frazer.github.io/PhyllotaxisFlowerOnCanvasWithD3/flyingFalafels.html"
