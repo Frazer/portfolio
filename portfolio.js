@@ -129,6 +129,14 @@ let displayPortfolio = (repositoryArray) => {
   lang:'D3.js',
   demo:"https://frazer.github.io/d3-profile/"}
   ,
+  {href:"Frazer/lowLevelJSColorBlender" ,
+  title:"lowLevelJSColorBlender",
+  name:"lowLevelJSColorBlender",
+  desc:"a web based color blender, reads and encodes from base64 from dropped images.  Exploring not using canvas or filters.",
+  backgroundColor:"#f1e05a;",
+  lang:"JavaScript",
+  demo:'https://frazer.github.io/lowLevelJSColorBlender/source/index.html'}
+  ,
   {href:"Frazer/cssVariables" ,
   title:"cssVariables",
   name:"cssVariables",
@@ -284,5 +292,3 @@ let displayPortfolio = (repositoryArray) => {
 ];
 
 displayPortfolio(repositoryArray);
-
-
