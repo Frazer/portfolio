@@ -134,7 +134,7 @@ let displayPortfolio = (repositoryArray) => {
   name:"cssVariables",
   desc:"A beautiful dynamic Radial Gradient controlled with the mouse and css variables",
   backgroundColor:"#563d7c;",
-  lang:'CSS-variable',
+  lang:'CSS-variables',
   demo:'https://frazer.github.io/cssVariables/index.html'}
   ,
   { href:"Frazer/dynamicallyAccessCSS.js",
