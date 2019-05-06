@@ -71,7 +71,7 @@ let displayPortfolio = (repositoryArray) => {
           if(data.stargazers_count){
             let starLink = document.createElement("A");
             starLink.classList = "pinned-repo-meta muted-link";
-            starLink.href = "data.stargazers_url";
+            starLink.href = "https://github.com/"+repObj.href+"/stargazers";
             starLink.target="viewProj"+repObj.name;
             starLink.innerHTML = '<svg aria-label="stars" class="octicon octicon-star" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg> '+data.stargazers_count;
             langP.appendChild(starLink);
@@ -96,22 +96,14 @@ let displayPortfolio = (repositoryArray) => {
   lang:"React css-transitions",
   demo:"http://frazerk.net/resume.html"}
   ,
-  {href:"Frazer/angularTodoWithCssSlide",
-  title:"angularTodoWithCssSlide",
-  name:"angularTodoWithCssSlide",
-  desc:"simple todo list practicing css transitions",
-  backgroundColor:"#f1a0aa;",
-  lang:"angularjs css-transitions",
-  demo:"https://frazer.github.io/angularTodoWithCssSlide/todo.html"}
-  ,
   {
-    href:"Frazer/vuejsbookingdemo",
-    title:"vuejsbookingdemo",
-    name:"vuejsbookingdemo",
-    desc:"Vue.js demo using jquery.ajax, autocomplete and date pickers",
+    href:"Frazer/PhyllotaxisFlowerOnCanvasWithD3",
+    title:"PhyllotaxisFlowerOnCanvasWithD3",
+    name:"PhyllotaxisFlowerOnCanvasWithD3",
+    desc:"PhyllotaxisFlowerOnCanvasWithD3",
     backgroundColor:"#f1e05a;",
-    lang:"Vue.js",
-    demo:"http://frazerk.net/booking/index.html"
+    lang:"D3.js",
+    demo:"https://frazer.github.io/PhyllotaxisFlowerOnCanvasWithD3/flyingFalafels.html"
   },
   {
     href:"Frazer/d3Presentation",
@@ -122,6 +114,29 @@ let displayPortfolio = (repositoryArray) => {
     lang:"D3.js",
     demo:"https://frazer.github.io/d3Presentation/"
   },
+  {href:"Frazer/d3-context-menu",
+  title:"d3-context-menu",
+  name:"d3-context-menu",
+  desc:"d3.js context-menus that I aligned towards the screen center. For my company, I also implemented multiple level submenus.",
+  backgroundColor:"#f1e05a;",
+  lang:'D3.js',
+  },
+  {href:"Frazer/d3-profile" ,
+  title:"d3-profile",
+  name:"d3-profile",
+  desc:"just me learning d3.js - but made some nice visuals",
+  backgroundColor:"#f1e05a;",
+  lang:'D3.js',
+  demo:"https://frazer.github.io/d3-profile/"}
+  ,
+  {href:"Frazer/cssVariables" ,
+  title:"cssVariables",
+  name:"cssVariables",
+  desc:"A beautiful dynamic Radial Gradient controlled with the mouse and css variables",
+  backgroundColor:"#563d7c;",
+  lang:'CSS-variable',
+  demo:'https://frazer.github.io/cssVariables/index.html'}
+  ,
   { href:"Frazer/dynamicallyAccessCSS.js",
     title:"dynamicallyAccessCSS.js",
     name: "dynamicallyAccessCSS.js",
@@ -137,30 +152,6 @@ let displayPortfolio = (repositoryArray) => {
   lang:'ReactVR',
   demo:'https://frazer.github.io/chaseMeInReactVR/vr/build/'}
   ,
-  {href:"Frazer/react-nav",
-  title:"react-nav",
-  name:"react-nav",
-  desc:"a Nav bar that loads and renders page components",
-  backgroundColor:"#f1e05a;",
-  lang:'React.js',
-  demo:'https://frazer.github.io/react-nav/build/'}
-  ,
-  {href:"Frazer/learning-three.js",
-  title:"learning-three.js",
-  name:"learning-three.js",
-  desc:"me toying with three.js ",
-  backgroundColor:"#f1e05a;",
-  lang:'three.js',
-  demo:'https://frazer.github.io/learning-three.js/index.html'}
-  ,
-  {href:"Frazer/adjustable-speed-slideshow",
-  title:"adjustable-speed-slideshow",
-  name:"adjustable-speed-slideshow",
-  desc:"Slide show for displaying family photos or party scenes",
-  backgroundColor:"#f1305a;",
-  lang:'HTML js',
-  demo:"https://frazer.github.io/adjustable-speed-slideshow/all.html"
-  },
   {href:"Frazer/pc-daily-motivation-scripts",
   title:"daily-motivation-scripts",
   name:"pc-daily-motivation-scripts",
@@ -168,27 +159,30 @@ let displayPortfolio = (repositoryArray) => {
   backgroundColor:"#f1e05a;",
   lang:'cron'
   },
-  {href:"Frazer/d3-context-menu",
-  title:"d3-context-menu",
-  name:"d3-context-menu",
-  desc:"d3.js context-menus that I aligned towards the screen center. For my company, I also implemented multiple level submenus.",
+  {href:"Frazer/reactMaterialUICommentBoard",
+  title:"reactMaterialUICommentBoard",
+  name:"reactMaterialUICommentBoard",
+  desc:"A simple multi threaded comment board built on react, with material-ui",
   backgroundColor:"#f1e05a;",
-  lang:'D3.js',
+  lang:'React.js',
+  demo:'https://frazer.github.io/reactMaterialUICommentBoard/'}
+  ,
+  {
+    href:"Frazer/vuejsbookingdemo",
+    title:"vuejsbookingdemo",
+    name:"vuejsbookingdemo",
+    desc:"Vue.js demo using jquery.ajax, autocomplete and date pickers",
+    backgroundColor:"#f1e05a;",
+    lang:"Vue.js",
+    demo:"http://frazerk.net/booking/index.html"
   },
-  {href:"Frazer/react-meteor-modal",
-  title:"react-meteor-modal",
-  name:"react-meteor-modal",
-  desc:"a react modal dialog for meteor 1.4 ",
-  backgroundColor:"#f1e05a;",
-  lang:'Meteor React',
-  },
-  {href:"Frazer/reveal.js",
-  title:"reveal.js",
-  name:"reveal.js",
-  forked:"hakimel/reveal.js",  //source.full_name
-  desc:"Ported 'Reveal.js - The HTML Presentation Framework' to Meteor_react.",
-  backgroundColor:"#f1e05a;",
-  lang:"Meteor React"}
+  {href:"Frazer/angularTodoWithCssSlide",
+  title:"angularTodoWithCssSlide",
+  name:"angularTodoWithCssSlide",
+  desc:"simple todo list practicing css transitions",
+  backgroundColor:"#f1a0aa;",
+  lang:"angularjs css-transitions",
+  demo:"https://frazer.github.io/angularTodoWithCssSlide/todo.html"}
   ,
   {href:"Frazer/scss_spritemap" ,
   title:"scss_spritemap",
@@ -196,21 +190,6 @@ let displayPortfolio = (repositoryArray) => {
   desc:"scss to make classes for each of your sprites from a sprite map.",
   backgroundColor:"#563d7c;",
   lang:'CSS SCSS'}
-  ,
-  {href:"Frazer/primeplay" ,
-  title:"primeplay",
-  name:"primeplay",
-  desc:"A tool for investigating and finding primes",
-  backgroundColor:"#563dfc;",
-  lang:'C'}
-  ,
-  {href:"Frazer/d3-profile" ,
-  title:"d3-profile",
-  name:"d3-profile",
-  desc:"just me learning d3.js - but made some nice visuals",
-  backgroundColor:"#f1e05a;",
-  lang:'D3.js',
-  demo:"https://frazer.github.io/d3-profile/"}
   ,
    { href:"Frazer/meteor-react-sprite-field",  //full_name
   title:"meteor-react-sprite-field",  //
@@ -232,8 +211,78 @@ let displayPortfolio = (repositoryArray) => {
   desc: "an html/canvas template for making games based on https://www.youtube.com/watch?v=KoWqdEACyLI&t=1s",  
   backgroundColor:"#f1e05a;",
   lang:"JavaScript",
+  },
+  { href:"Frazer/CodeCombatMathKingdom",  
+  title:"CodeCombatMathKingdom",
+  name: "CodeCombatMathKingdom",  
+  desc: "CodeCombat levels I designed during the 2019 DeveloperWeek hackathon",  
+  backgroundColor:"#f1e05a;",
+  lang:"JavaScript",
+  },
+  {href:"Frazer/reveal.js",
+  title:"reveal.js",
+  name:"reveal.js",
+  forked:"hakimel/reveal.js",  //source.full_name
+  desc:"Ported 'Reveal.js - The HTML Presentation Framework' to Meteor_react.",
+  backgroundColor:"#f1e05a;",
+  lang:"Meteor React"}
+  ,
+  {href:"Frazer/react-meteor-modal",
+  title:"react-meteor-modal",
+  name:"react-meteor-modal",
+  desc:"a react modal dialog for meteor 1.4 ",
+  backgroundColor:"#f1e05a;",
+  lang:'Meteor React',
+  },
+  {href:"Frazer/react-nav",
+  title:"react-nav",
+  name:"react-nav",
+  desc:"a Nav bar that loads and renders page components",
+  backgroundColor:"#f1e05a;",
+  lang:'React.js',
+  demo:'https://frazer.github.io/react-nav/build/'}
+  ,
+  {href:"Frazer/expressReact",
+  title:"expressReact",
+  name:"expressReact",
+  desc:"a random message board practicing Express interacting with React",
+  backgroundColor:"#f1e05a;",
+  lang:'React.js, Express',
   }
+  ,
+  {href:"Frazer/adjustable-speed-slideshow",
+  title:"adjustable-speed-slideshow",
+  name:"adjustable-speed-slideshow",
+  desc:"Slide show for displaying family photos or party scenes",
+  backgroundColor:"#f1305a;",
+  lang:'HTML js',
+  demo:"https://frazer.github.io/adjustable-speed-slideshow/all.html"
+  },
+  {href:"Frazer/learning-three.js",
+  title:"learning-three.js",
+  name:"learning-three.js",
+  desc:"me toying with three.js ",
+  backgroundColor:"#f1e05a;",
+  lang:'three.js',
+  demo:'https://frazer.github.io/learning-three.js/index.html'}
+  ,
+  {href:"Frazer/primeplay" ,
+  title:"primeplay",
+  name:"primeplay",
+  desc:"A tool for investigating and finding primes",
+  backgroundColor:"#563dfc;",
+  lang:'C'}
+  ,
+  { href:"Frazer/hashSort",  
+  title:"hashSort",
+  name: "hashSort",  
+  desc: "A sorting algorithm that is faster than ShellSort when the range of values is smaller than the number of elements",  
+  backgroundColor:"#f1e05a;",
+  lang:"JavaScript",
+  },
   
 ];
 
 displayPortfolio(repositoryArray);
+
+
