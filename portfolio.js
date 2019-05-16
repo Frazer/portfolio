@@ -68,12 +68,13 @@ let displayPortfolio = (repositoryArray) => {
         response.json().then(data => { 
 
           if (data.description) {descP.innerHTML = data.description;}
-          if(data.stargazers_count){
+          let stars = data.stargazers_count || repObj.stars;
+          if(stars){
             let starLink = document.createElement("A");
             starLink.classList = "pinned-repo-meta muted-link";
             starLink.href = "https://github.com/"+repObj.href+"/stargazers";
             starLink.target="viewProj"+repObj.name;
-            starLink.innerHTML = '<svg aria-label="stars" class="octicon octicon-star" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg> '+data.stargazers_count;
+            starLink.innerHTML = '<svg aria-label="stars" class="octicon octicon-star" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg> '+stars;
             langP.appendChild(starLink);
           }
 
@@ -150,7 +151,9 @@ let displayPortfolio = (repositoryArray) => {
     name: "dynamicallyAccessCSS.js",
     desc:  "edit rules in your css",
     backgroundColor:"#f1e05a;",
-    lang: "JavaScript"}
+    lang: "JavaScript",
+    stars: 4
+  }
   ,       
   {href:"Frazer/chaseMeInReactVR",
   title:"chaseMeInReactVR",
@@ -220,6 +223,14 @@ let displayPortfolio = (repositoryArray) => {
   backgroundColor:"#f1e05a;",
   lang:"JavaScript",
   },
+  { href:"Frazer/8192",  
+  title:"8192",
+  name: "8192",  
+  desc: "This game is a modification from 2048, play here: http://frazer.github.io/8192/ - see original at https://github.com/gabrielecirulli/2048",
+  backgroundColor:"#f1e05a;",
+  lang:"JavaScript",
+  demo:"http://frazer.github.io/8192/"
+  },
   { href:"Frazer/CodeCombatMathKingdom",  
   title:"CodeCombatMathKingdom",
   name: "CodeCombatMathKingdom",  
@@ -241,6 +252,7 @@ let displayPortfolio = (repositoryArray) => {
   desc:"a react modal dialog for meteor 1.4 ",
   backgroundColor:"#f1e05a;",
   lang:'Meteor React',
+  stars: 1
   },
   {href:"Frazer/react-nav",
   title:"react-nav",
