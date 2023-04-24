@@ -106,6 +106,22 @@ let displayPortfolio = (repositoryArray) => {
     lang:"D3.js",
     demo:"https://frazer.github.io/PhyllotaxisFlowerOnCanvasWithD3/flyingFalafels.html"
   },
+  {href:"Frazer/CopilotSnake" ,
+  title:"Experimenting with copilot",
+  name:"Mouse controlled Snake Game",
+  desc:"a web based canvas game, aa variation on the classic, where you can switch between keyboard and mouse.",
+  backgroundColor:"#f1e05a;",
+  lang:"JavaScript",
+  demo:'https://frazer.github.io/CopilotSnake/snake.html'}
+  ,
+  {href:"Frazer/UStaxShareEstimator" ,
+  title:"US tax explorer",
+  name:"See tax breakdown",
+  desc:"By seeing how your tax is split across brackets, and how filing jointly is shared, we hope this will give you a more intuitive understanding of your tax situation.",
+  backgroundColor:"#f1e05a;",
+  lang:"JavaScript",
+  demo:'https://frazer.github.io/UStaxShareEstimator/tax.html'}
+  ,
   {
     href:"Frazer/d3Presentation",
     title:"d3Presentation",
