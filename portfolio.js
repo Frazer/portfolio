@@ -89,6 +89,14 @@ let displayPortfolio = (repositoryArray) => {
 
   var repositoryArray = [
 
+  {href:"Frazer/clipM",
+  title:"clip'M",
+  name:"Clip'M",
+  desc:"awesome copy paste manager for M chip Macs",
+  backgroundColor:"#f1a0aa;",
+  lang:"Swift",
+  demo:"https://frazer.github.io/clipM/"}
+  ,
   {href:"Frazer/cvFeatures",
   title:"cvFeatures",
   name:"cvFeatures",
